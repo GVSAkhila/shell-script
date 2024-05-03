@@ -5,4 +5,4 @@ Number2=$2
 
 sum=$(Number1+Number2)
 
-echo"adding two numbers $sum"
+echo "adding two numbers:  $sum"
