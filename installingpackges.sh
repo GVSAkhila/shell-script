@@ -3,6 +3,9 @@
 # our program goal is to install MySQL
 
 USERID=$(id -u)
+DATE=$(date +%F) 
+SCRIPT_NAME=$0
+LOGFILE=/tmp/SCRIPT_NAME-$DATE.log
 
 if [ $USERID -ne 0 ]
 then
@@ -21,9 +24,9 @@ VALIDAE() {
 }
 
 # Install MySQL
-yum install mysql -y
+yum install mysql -y &>>LOGFILE
 VALIDAE $? "installing mysql"
 
 # Install postfix
-yum install postfix -y
+yum install postfix -y &>>LOGFILE
 VALIDAE $? "installing postfix"
