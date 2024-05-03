@@ -13,10 +13,10 @@ fi
 VALIDAE() {
     if [ $1 -ne 0 ]
     then
-        echo "Installation encountered an error"
+        echo "$2 encountered an error"
         exit 1
     else
-        echo "Installation was successful"
+        echo "$2 was successful"
     fi
 }
 
