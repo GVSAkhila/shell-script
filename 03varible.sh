@@ -3,11 +3,11 @@
 
 echo "Enter the username"
 
-read USERNAME
+read -s USERNAME
 echo  "username entered: $USERNAME"
 
 echo "enter the password"
 
-read PASSWORD
+read -s PASSWORD
 
 echo "password is entered: $PASSWORD"
