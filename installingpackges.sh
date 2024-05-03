@@ -1,30 +1,29 @@
 #!/bin/bash
 
-# our program goal is to install mysql
+# our program goal is to install MySQL
 
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
-    echo "ERROR:: Please run this script with root access"
+    echo "ERROR: Please run this script with root access"
     exit 1
-# else
-#     echo "INFO:: You are root user"
 fi
-VALIDAE(){
-    if [ $? -ne 0 ]
+
+VALIDAE() {
+    if [ $1 -ne 0 ]
     then
-     echo "Installation of  is error"
-    exit 1
-    else 
-     echo "Installation of mysql is sucess"
-    exit 1
+        echo "Installation encountered an error"
+        exit 1
+    else
+        echo "Installation was successful"
+    fi
 }
 
-# it is our responsibility again to check installation is success or not
+# Install MySQL
 yum install mysql -y
-VALIDAE
+VALIDAE $?
 
+# Install postfix
 yum install postfix -y
-
-VALIDAE
+VALIDAE $?
