@@ -22,8 +22,8 @@ VALIDAE() {
 
 # Install MySQL
 yum install mysql -y
-VALIDAE $?
+VALIDAE $? "installing mysql"
 
 # Install postfix
 yum install postfix -y
-VALIDAE $?
+VALIDAE $? "installing postfix"
