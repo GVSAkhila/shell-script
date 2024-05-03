@@ -11,24 +11,20 @@ then
 # else
 #     echo "INFO:: You are root user"
 fi
+VALIDAE(){
+    if [ $? -ne 0 ]
+    then
+     echo "Installation of  is error"
+    exit 1
+    else 
+     echo "Installation of mysql is sucess"
+    exit 1
+}
 
 # it is our responsibility again to check installation is success or not
 yum install mysql -y
-
-if [ $? -ne 0 ]
-then
-    echo "Installation of mysql is error"
-    exit 1
-else
-    echo "Installation of mysql is success"
-fi
+VALIDAE
 
 yum install postfix -y
 
-if [ $? -ne 0 ]
-then
-    echo "Installation of postfix is error"
-    exit 1
-else
-    echo "Installation of postfix is success"
-fi
+VALIDAE
