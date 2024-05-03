@@ -1,8 +1,10 @@
 #!/bin/bash
-
+# print given number is greaterthan 10
 Number1=$1
-
-if[ 1....10] 
+for [ $Number1 -gt 10 ]
 then
-echo "print number:$Number1"
+echo "given number is greaterthan 10: $Number1"
+else
+echo "given number is not greaterthan 10: $Number1"
+ 
 
