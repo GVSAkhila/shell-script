@@ -27,7 +27,7 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
-    echo "ERROR:: Please run this script with root access"
+    echo " $R ERROR:: Please run this script with root access"
     exit 1
 # else
 #     echo "INFO:: You are root user"
@@ -38,6 +38,6 @@ yum install mysql -y &>>$LOGFILE
 
 VALIDATE $? "Installing MySQL"
 
-yum install posddtfix -y &>>$LOGFILE
+yum install postfix -y &>>$LOGFILE
 
 VALIDATE $? "Installing postfix"
