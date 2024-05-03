@@ -27,7 +27,7 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
-    echo " $R ERROR:: Please run this script with root access"
+    echo -e " $R ERROR:: Please run this script with root access"
     exit 1
 # else
 #     echo "INFO:: You are root user"
