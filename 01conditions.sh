@@ -1,11 +1,11 @@
 #!/bin/bash
-# given number is odd or not
+# Determine if a given number is odd or even
 
-echo "enter the number"
-r='expr $n%2'
-if [ $r -eq 0 ]
-then
-echo "$n given number is even"
+echo "Enter the number:"
+read n
+r=$(expr $n % 2)
+if [ $r -eq 0 ]; then
+    echo "$n is even"
 else
-echo "$n given number is odd"
+    echo "$n is odd"
 fi
