@@ -2,12 +2,13 @@
 
 USERID=$(id -u)
 
-R="\e[32m
+R="\e[32m"
 
-if [ $USERID -ne 0]
+if [[ $USERID -ne 0 ]]
 then
-echo "$R please run This script with root user"
+    echo -e "$R Please run this script with root user."
+    exit 1
 fi
 
 yum install git -y
-echo "git installation in progress"
+echo "Git installation in progress."
