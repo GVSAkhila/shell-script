@@ -29,6 +29,6 @@ fi
 # Loop through each argument passed to the script and execute it
 for i in "$@"; do
     echo "Executing: $i"
-    eval "$i" &>> "$LOGFILE"
+    yum install $i -y &>>$LOGFILE
     VALIDATE $? "$i"
 done
