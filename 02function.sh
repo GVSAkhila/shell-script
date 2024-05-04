@@ -8,6 +8,7 @@ LOGFILE="/tmp/$SCRIPT_NAME-$DATE.log"
 # Define color variables
 G="\e[32m"
 R="\e[31m"
+Y="\e[33"
 NC="\e[0m"  # Reset color
 
 # Function to validate command execution
@@ -28,14 +29,14 @@ fi
 
 # Loop through each argument passed to the script and check if it's installed
 for i in "$@"; do
-    echo "Checking if $i is installed..."
+    echo -e " $Y Checking if $i is installed..."
     yum list installed $i &>>$LOGFILE
 
     if [ $? -ne 0 ]; then
-        echo "Package $i is not installed. Installing..."
+        echo "$R Package $i is not installed. Installing..."
         yum install $i -y &>>$LOGFILE
         VALIDATE $? "$i"
     else
-        echo "Package $i is already installed."
+        echo "$G Package $i is already installed."
     fi
 done
