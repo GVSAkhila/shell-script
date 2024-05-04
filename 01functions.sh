@@ -12,4 +12,4 @@ then
 fi
 
 yum install git -y
-echo " $G Git installation in progress."
+echo -e " $G Git installation in progress."
