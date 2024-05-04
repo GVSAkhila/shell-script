@@ -2,7 +2,8 @@
 
 USERID=$(id -u)
 
-R="\e[32m"
+G="\e[32m"
+R="\e[31m"
 
 if [[ $USERID -ne 0 ]]
 then
@@ -11,4 +12,4 @@ then
 fi
 
 yum install git -y
-echo "Git installation in progress."
+echo " $G Git installation in progress."
