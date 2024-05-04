@@ -33,10 +33,10 @@ for i in "$@"; do
     yum list installed $i &>>$LOGFILE
 
     if [ $? -ne 0 ]; then
-        echo "$R Package $i is not installed. Installing..."
+        echo -e "$R Package $i is not installed. Installing..."
         yum install $i -y &>>$LOGFILE
         VALIDATE $? "$i"
     else
-        echo "$G Package $i is already installed."
+        echo -e "$G Package $i is already installed."
     fi
 done
