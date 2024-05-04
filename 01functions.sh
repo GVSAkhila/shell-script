@@ -14,12 +14,12 @@ then
     exit 1
 fi
 
-yum install git -y &>>$LOGFILE
+yum install gitt -y &>>$LOGFILE
 echo -e " $G Git installation in progress."
 
 if [ $? -ne 0]
 then
-echo "$R Installation fail"
+echo -e "$R Installation fail"
 else 
-echo "$G installation sucess"
+echo -e "$G installation sucess"
 fi
