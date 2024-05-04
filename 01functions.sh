@@ -22,8 +22,9 @@ then
     exit 1
 fi
 
-yum install gitt -y &>>$LOGFILE
- 
-VALIDATE $? "$R GIT"
-yum install mysql -y &>>$LOGFILE
-VALIDATE $? "$G mysql"
+for i in $@
+do
+echo "$i"
+VALIDATE $? "$i"
+done
+
