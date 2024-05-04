@@ -8,7 +8,7 @@ LOGFILE="/tmp/$SCRIPT_NAME-$DATE.log"
 # Define color variables
 G="\e[32m"
 R="\e[31m"
-Y="\e[33"
+Y="\e[33m"
 NC="\e[0m"  # Reset color
 
 # Function to validate command execution
@@ -29,7 +29,7 @@ fi
 
 # Loop through each argument passed to the script and check if it's installed
 for i in "$@"; do
-    echo -e " $Y Checking if $i is installed..."
+    echo -e "$Y Checking if $i is installed..."
     yum list installed $i &>>$LOGFILE
 
     if [ $? -ne 0 ]; then
