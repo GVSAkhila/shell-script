@@ -22,3 +22,4 @@ then
 echo "$R Installation fail"
 else 
 echo "$G installation sucess"
+fi
