@@ -16,3 +16,9 @@ fi
 
 yum install git -y &>>$LOGFILE
 echo -e " $G Git installation in progress."
+
+if [ $? -ne 0]
+then
+echo "$R Installation fail"
+else 
+echo "$G installation sucess"
