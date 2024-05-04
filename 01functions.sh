@@ -10,7 +10,7 @@ VALIDATE(){
 then
 echo -e "$2 $R Installation fail"
 else 
-echo -e " $2 $G installation sucess"
+echo -e "$2 $G installation sucess"
 fi
 }
 G="\e[32m"
