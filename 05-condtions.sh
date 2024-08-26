@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# Get the current day of the week (e.g., Sun, Mon, Tue, etc.)
 today=$(date +%a)
 
-if [ "today"=="sunday"]
-then
-echo "Today No class"
+# Check if today is Sunday
+if [ "$today" == "Sun" ]; then
+    echo "No class today."
 else
-echo "today is class day"
+    echo "Today is a class day."
+fi
