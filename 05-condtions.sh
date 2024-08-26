@@ -6,6 +6,7 @@ today=$1
 # Check if today is Sunday
 if [ "$today" == "Sunday" ]; then
     echo "No class today."
+    exit 1
 else
     echo "Today is a class day."
 fi
