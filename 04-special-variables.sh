@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Script name: $0"
+echo "Number of arguments: $#"
+echo "All arguments (as separate values): $@"
+echo "All arguments (as a single string): $*"
+echo "Process ID of the script: $$"
+echo "Last background process ID: $!"
+echo "Exit status of the last command: $?"
+echo "Current options: $-"
+echo "Current working directory: $PWD"
+echo "Previous working directory: $OLDPWD"
+echo "A random number: $RANDOM"
+echo "Current line number: $LINENO"
+echo "Seconds since the script started: $SECONDS"
