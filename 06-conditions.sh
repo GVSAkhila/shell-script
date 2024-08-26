@@ -5,7 +5,7 @@
 number1=$1
 
 if [ $number1 -ge 20 ] then
-echo "Given number is greaterthan 20"
+    echo "Given number is greaterthan 20"
 else
-echo "Given number is lessthan 20"
+     echo "Given number is lessthan 20"
 fi
