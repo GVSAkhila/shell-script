@@ -6,8 +6,8 @@ Day=$1
 # Print the received value to debug
 echo "Received day: '$Day'"
 
-# Check if today is Sunday
-if [ "$Day" == "Sunday" || "saturday" ]; then
+# Check if today is Sunday or Saturday
+if [ "$Day" == "Sunday" ] || [ "$Day" == "Saturday" ]; then
     echo "No class today."
     exit 1
 else
