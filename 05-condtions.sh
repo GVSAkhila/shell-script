@@ -7,7 +7,7 @@ Day=$1
 echo "Received day: '$Day'"
 
 # Check if today is Sunday
-if [ "$Day" == "Sunday" ]; then
+if [ "$Day" == "Sunday" || "saturday" ]; then
     echo "No class today."
     exit 1
 else
