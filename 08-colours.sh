@@ -11,7 +11,7 @@ then
   echo -e "$R Please run this script with root privilages$N"
   exit 1
 fi
-dnf intall mysql -y
+dnf install mysql -y
 
 if [$? -ne 0 ]
 then
