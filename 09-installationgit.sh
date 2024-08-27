@@ -6,11 +6,11 @@ then
   echo "please run this script with root privelages"
   exit 1
 fi
-dnf list installed gitt 
+dnf list installed git 
 if [ $? -ne 0 ]
 then
   echo "Git is not installed.lets do it"
-  dnf install gitt -y
+  dnf install git -y
 if [ $? -ne 0 ]
 then
    echo "git installations is failed.please check"
