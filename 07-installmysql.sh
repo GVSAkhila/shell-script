@@ -9,10 +9,10 @@ else
   dnf install mysqll -y
     if [ $? -ne 0 ]
     then
-     echo "mysql package is installed sucessfully"
+     echo "mysql package is not installed please check"
      exit 1
     else
-      echo "mysql package is failed please check"  
+      echo "mysql package is installed sucessfully"  
       exit 1
     fi  
 fi
