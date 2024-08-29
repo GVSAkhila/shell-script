@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e # setting the automatic exit, if we get error, set -ex for debug
 
 echo "hellow sankar.he is the hardwoker person"
 echooo "he is the lazy boy"
